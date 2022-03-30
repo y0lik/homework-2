@@ -1,13 +1,15 @@
 import random
 print("You have to choose the num from 1 to 10")
+a = int(random.randint(1, 10))
 def choose():
-    a = random.randint(1, 10)
-    x=input(Your num: )
-    if x=a:
+    x=input("Your num: ")
+    if x==a:
         print("Cool, you guess it")
     else:
-        b=input(Play again? y/n)
-    if b="y":
+        b=input("Oh, you lose. Play again? y/n ")
+    if b=="y":
+        return a
         choose()
-    if b="n":
-        break
+    if b=="n":
+        print("okay:(")
+choose()
